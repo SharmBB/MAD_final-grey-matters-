@@ -176,6 +176,4 @@
             android:textColor="@color/cardview_light_background"
             android:textStyle="bold" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.mad;
 
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,8 +23,20 @@ public class Home extends AppCompatActivity {
         b1=(Button)findViewById(R.id.button);
         b2=(Button)findViewById(R.id.button3);
         b3=(Button)findViewById(R.id.log);
-
-
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Home.this,our_rooms.class);
+                startActivity(intent);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Home.this,pacakage.class);
+                startActivity(i);
+            }
+        });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

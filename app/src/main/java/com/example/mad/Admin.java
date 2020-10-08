@@ -1,7 +1,6 @@
 package com.example.mad;
 
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,10 +18,20 @@ public class Admin extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_admin );
         logout = findViewById( R.id.log );
+        room = findViewById( R.id.empa );
+        pac = findViewById( R.id.pac );
+        emp = findViewById( R.id.emp );
+        book = findViewById( R.id.book );
 
 
+        pac.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pac = new Intent( Admin.this, Adminpackage.class );
+                startActivity( pac );
 
-
+            }
+        } );
 
         logout.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -30,6 +39,30 @@ public class Admin extends AppCompatActivity {
                 Intent logout = new Intent( Admin.this, Login.class );
                 Toast.makeText( getApplicationContext(), "LOGOUT", Toast.LENGTH_SHORT ).show();
                 startActivity( logout );
+            }
+        } );
+        room.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent room = new Intent( Admin.this, ADroom.class );
+                startActivity( room );
+            }
+        } );
+        emp.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent employee = new Intent( Admin.this, AD_Employee.class );
+                startActivity( employee );
+            }
+        } );
+
+        book.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent employee = new Intent( Admin.this, Admin_booking.class );
+                startActivity( employee );
+
+
             }
         } );
 

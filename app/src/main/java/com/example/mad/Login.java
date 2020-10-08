@@ -45,11 +45,13 @@ public class Login extends AppCompatActivity {
                     if (chkemailpass == true) {
                         Intent log=new Intent( Login.this,Home.class );
                         startActivity( log );
+
                         if (email.equals("sk15@gmail.com") || password.equals("sharmi")) {
                             Intent adm = new Intent(Login.this, Admin.class);
 
                             startActivity(adm);
                         }
+
                         Toast.makeText(getApplicationContext(), "Sucessfully Login", Toast.LENGTH_SHORT).show();
                         clearControls();
 
